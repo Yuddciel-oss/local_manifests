@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+<!-- fetching sources -->      
+
+        <remote name="Amritorock"
+                fetch="https://github.com/Amritorock" />
+
+        <remote name="om"
+                fetch="https://github.com/takumi021" />
+
+        <remote name="clang"
+                fetch="https://gitlab.com/Amritorock" />
+    
+        <remote name="shygos"
+                fetch="https://github.com/shygos" />
+
+        <remote name="silont"
+                fetch="https://github.com/silont-project" />
+    
+
+<!-- device trees -->
+
+        <project path="device/realme/r5x" name="android_device_realme_r5x" remote="Amritorock" revision="Octavi" />
+        <project path="vendor/realme/r5x" name="vendor_realme_bearmonets" remote="om" revision="thirteen" clone-depth="1" />
+        <project path="kernel/realme/r5x" name="kernel_realme_trinket" remote="silont" revision="Chisato" clone-depth="1" />
+        <project path="prebuilts/clang/host/linux-x86/clang-r450784d" name="clang-r450784d" remote="clang" revision="master" clone-depth="1" />
+
+<!-- Replacement -->
+
+        <remove-project name="android_frameworks_base" />
+        <project path="frameworks/base" name="android_frameworks_base-3" remote="Amritorock" revision="thirteen" />
+        <remove-project name="android_frameworks_av" />
+        <project path="frameworks/av" name="android_frameworks_av" remote="shygos" revision="thirteen" />
+        <remove-project name="android_frameworks_opt_telephony" />
+        <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony-1" remote="Amritorock" revision="thirteen" />
+        <remove-project name="android_vendor_octavi" />
+        <project path="vendor/octavi" name="android_vendor_octavi" remote="Amritorock" revision="thirteen" />
+
+
+</manifest>
