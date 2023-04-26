@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+<!-- fetching sources -->      
+
+        <remote name="Amritorock"
+                fetch="https://github.com/Amritorock" />
+
+        <remote name="mcdofrenchfreis"
+                fetch="https://github.com/mcdofrenchfreis" />
+
+       <remote name="arrow"
+                fetch="https://github.com/ArrowOS-Devices" />
+
+       <remote name="LineageOS"
+                fetch="https://github.com/LineageOS" />
+    
+<!-- device trees -->
+
+        <project path="device/realme/r5x" name="android_device_realme_r5x" remote="Amritorock" revision="12.1" />
+        <project path="vendor/realme/r5x" name="vendor_realme_r5x" remote="Amritorock" revision="Trinket" />
+        <project path="prebuilts/clang/host/linux-x86/clang-r416183b1" name="android_prebuilts_clang_host_linux-x86_clang-r416183b1" remote="arrow" revision="arrow-11.0" />
+
+<!-- Replacement -->
+
+        <remove-project name="LineageOS/android_frameworks_base" />
+        <project path="frameworks/base" name="android_frameworks_base" remote="Amritorock" revision="Lineage-12" />
+
+        <remove-project name="LineageOS/android_packages_apps_Settings" />
+        <project path="package/apps/Settings" name="android_packages_apps_Settings" remote="Amritorock" revision="lineage-19.1" />
+
+
+</manifest>
