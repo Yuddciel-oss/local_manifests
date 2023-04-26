@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <remote name="NganuCoeg"
+          fetch="https://github.com/NganuCoeg" />
+
+  <remote name="ArrowOS"
+          fetch="https://github.com/ArrowOS" />
+
+  <remote name="LOS"
+          fetch="https://github.com/LineageOS" />
+
+  <remote name="Deve"
+          fetch="https://github.com/Realme-G70-Series" />
+
+  <!-- Trees -->
+  <project path="device/realme/r5x" name="dt_r5x" remote="NganuCoeg" revision="ci11" clone-depth="1" />
+  <project path="vendor/realme/r5x" name="vt_r5x" remote="NganuCoeg" revision="11" clone-depth="1" />
+  <project path="kernel/realme/r5x" name="kt_r5x" remote="NganuCoeg" revision="11" clone-depth="1" />
+
+  <!-- HALs -->
+  <project path="hardware/qcom-caf/sm8150/audio" name="android_hardware_qcom_audio" remote="ArrowOS" revision="arrow-11.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="android_hardware_qcom_display" remote="ArrowOS" revision="arrow-11.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="android_hardware_qcom_media" remote="ArrowOS" revision="arrow-11.0-caf-sm8150" />
+  <project path="vendor/qcom/opensource/commonsys/display-intf" name="android_vendor_qcom_opensource_display-commonsys-intf" remote="ArrowOS" revision="arrow-11.0" />
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="LOS" revision="lineage-18.1" />
+
+  <!-- RealmeParts -->
+  <project path="packages/apps/RealmeParts" name="android_packages_apps_RealmeParts" remote="Deve" revision="lineage-18.1" clone-depth="1" />
+
+</manifest>
